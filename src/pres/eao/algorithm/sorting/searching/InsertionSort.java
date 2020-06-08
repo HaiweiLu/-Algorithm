@@ -7,8 +7,8 @@ public class InsertionSort {
 		int i = 0, j = 0;
 		for (i = 1; i < a.length; i++) {
 			int cur = a[i];
-			for (j = i - 1; j >= 0 && a[j] >= cur; j--) {
-				a[j + 1] = a[j];
+			for (j = i - 1; j >= 0 && a[j] >= cur; j--) { // 和已排序的对比
+				a[j + 1] = a[j];  // 后移一位
 			}
 			a[j + 1] = cur;
 		}
