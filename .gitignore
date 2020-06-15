@@ -1,1 +1,10 @@
+# 版本管理时, 要忽略提交的文件和文件夹
+
 /bin/
+
+# 忽略以下文件
+.classpath
+.project
+
+# 忽略 .setting 文件夹
+.settings/
