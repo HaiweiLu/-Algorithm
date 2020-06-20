@@ -21,8 +21,10 @@ L = []
 
 
 def eventRecursion(s, f, k, n):
-    """
-    递归贪心算法
+    """递归贪心算法
+    核心算法: 
+    先把活动按照时间开始从小到大排序,
+    在找出最大相容的活动安排集合
     :param s: list[], 活动开始的时间
     :param f: list[], 活动结束的时间
     :param k: k, 指出要求解的子问题Sk
@@ -34,7 +36,7 @@ def eventRecursion(s, f, k, n):
         m = m + 1
     if m <= n:
         L.append(m)
-        activity1(s, f, m, n)
+        eventRecursion(s, f, m, n)
         return L
     else:
         return
@@ -55,5 +57,4 @@ print(eventRecursion([0, 1, 3, 0, 5, 3, 5, 6, 8, 8, 2, 12], [0, 4, 5, 6, 7, 9, 9
 # print(activity([0, 1, 3, 0, 5, 3, 5, 6, 8, 8, 2, 12], [0, 4, 5, 6, 7, 9, 9, 10, 11, 12, 14, 16]))
 '''
 结果:[1,4,8,11]
-详细过程讲解参考算法导论
 '''
