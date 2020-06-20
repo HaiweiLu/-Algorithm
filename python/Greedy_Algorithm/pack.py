@@ -22,7 +22,7 @@ return maxValue
 def KnapSack(items, contains):
     """完全背包问题贪心算法解法
     算法核心:
-    优先拿取 价值/重量 最大的物品,直到背包放不下
+    优先拿取 价值/重量 最大的物品,直到背包放不下为止
 
     Args:
         items ([(价值, 重量)]): 物品信息
